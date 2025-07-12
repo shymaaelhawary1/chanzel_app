@@ -6,8 +6,8 @@ import 'package:device_preview/device_preview.dart';
 import 'CartManager.dart';
 import 'OnbourdingScreen.dart';
 import 'login_page.dart';
-import 'login_cubit.dart';
-import 'sigup_cubit.dart';
+import 'controllers/login_cubit.dart';
+import 'controllers/sigup_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
               controller: LoginCubit(),
             );
           } else {
-            return OnboardingScreen();
+            return const OnboardingScreen();
           }
         },
       ),
